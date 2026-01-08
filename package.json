@@ -1,0 +1,62 @@
+{
+  "name": "lattice-lottery-new",
+  "private": false,
+  "version": "1.0.0-2",
+  "type": "module",
+  "keywords": [
+    "lottery",
+    "九宫格",
+    "大转盘",
+    "老虎机",
+    "抽奖组件"
+  ],
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lib": "deploy.sh",
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/index.umd.js",
+  "module": "./dist/index.es.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js"
+    },
+    "./SlotMachine": {
+      "import": "./dist/SlotMachine.es.js",
+      "require": "./dist/SlotMachine.umd.js"
+    },
+    "./LotteryGrid": {
+      "import": "./dist/LotteryGrid.es.js",
+      "require": "./dist/LotteryGrid.umd.js"
+    },
+    "./LotteryList": {
+      "import": "./dist/LotteryList.es.js",
+      "require": "./dist/LotteryList.umd.js"
+    },
+    "./Turntable": {
+      "import": "./dist/Turntable.es.js",
+      "require": "./dist/Turntable.umd.js"
+    }
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.5.2",
+    "lattice-lottery-new": "^1.0.0-0",
+    "less": "^4.2.0",
+    "less-loader": "^12.2.0",
+    "vite": "^5.0.8",
+    "vitepress-demoblock": "^1.0.4",
+    "vite-plugin-build": "^0.10.0",
+    "vite-plugin-css-injected-by-js": "^3.4.0",
+    "vitepress": "1.0.0-alpha.22",
+    "vue": "^3.3.11"
+  }
+}
